@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Моя Автоматична Галерея</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Моя Фото-Галерея</h1>
+  <div class="gallery">
+    <img src="photos/123123123.jpg" alt="123123123.jpg">
+    <img src="photos/IMG20250502131241_BURST002.jpg" alt="IMG20250502131241_BURST002.jpg">
+    <img src="photos/IMG20250506142841.jpg" alt="IMG20250506142841.jpg">
+    <img src="photos/IMG20250509193658.jpg" alt="IMG20250509193658.jpg">
+    <img src="photos/IMG20250511205928.jpg" alt="IMG20250511205928.jpg">
+    <img src="photos/IMG20250511210732.jpg" alt="IMG20250511210732.jpg">
+    <img src="photos/IMG20250518184449.jpg" alt="IMG20250518184449.jpg">
+    <img src="photos/IMG20250527203013.jpg" alt="IMG20250527203013.jpg">
+    <img src="photos/IMG20250529145302.jpg" alt="IMG20250529145302.jpg">
+    <img src="photos/IMG20250529145443.jpg" alt="IMG20250529145443.jpg">
+    <img src="photos/IMG20250529145625.jpg" alt="IMG20250529145625.jpg">
+    <img src="photos/IMG20250529160431.jpg" alt="IMG20250529160431.jpg">
+    <img src="photos/IMG20250529161649.jpg" alt="IMG20250529161649.jpg">
+    <img src="photos/IMG20250531195610.jpg" alt="IMG20250531195610.jpg">
+    <img src="photos/IMG20250601134325.jpg" alt="IMG20250601134325.jpg">
+  </div>
+</body>
+</html>
