@@ -29,7 +29,7 @@ html_start = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моя галерея</title>
+  <title>My gallery</title>
   <style>
     :root {
       --bg-light: #f2f2f2;
@@ -117,7 +117,7 @@ html_start = """<!DOCTYPE html>
 </head>
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌗 Тема</button>
-  <h1>Моя галерея</h1>
+  <h1>My gallery</h1>
   <div class="gallery">
 """
 
