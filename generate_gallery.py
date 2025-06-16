@@ -113,6 +113,12 @@ html_start = """<!DOCTYPE html>
     .close:hover {
       color: #aaa;
     }
+    .copy-msg {
+      display: none;
+      color: green;
+      font-size: 0.9em;
+      margin-left: 10px;
+    }
   </style>
 </head>
 <body>
@@ -133,6 +139,41 @@ html_end = """
     <span class="close" onclick="closeModal()">&times;</span>
     <img class="modal-content" id="modal-img">
   </div>
+
+  <footer>
+    <p>© 2025 Yarik</p>
+    <p>
+      <a href="https://steamcommunity.com/id/plavlyenyysynok/" target="_blank">🎮 Steam</a> |
+      <a href="https://www.instagram.com/yarik_tarnavski9/" target="_blank">📸 Instagram</a> |
+      <a href="#" onclick="copyDiscord(event)">💬 Discord</a>
+    </p>
+  </footer>
+
+  <div id="toast">Ім'я користувача скопійовано</div>
+
+  <style>
+    #toast {
+      visibility: hidden;
+      min-width: 200px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 10px;
+      padding: 12px 20px;
+      position: fixed;
+      z-index: 999;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
 
   <script>
     function toggleTheme() {
@@ -156,10 +197,23 @@ html_end = """
     function closeModal() {
       document.getElementById("modal").style.display = "none";
     }
+
+    function copyDiscord(event) {
+      event.preventDefault();
+      const username = "yarik09";
+      navigator.clipboard.writeText(username).then(() => {
+        const toast = document.getElementById("toast");
+        toast.className = "show";
+        setTimeout(() => {
+          toast.className = toast.className.replace("show", "");
+        }, 2000);
+      });
+    }
   </script>
 </body>
 </html>
 """
+
 
 # Запис у HTML-файл
 with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
